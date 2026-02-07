@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ростелеком | Проектный офис</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+
+    <main id="main-page">
+        <section class="hero">
+            <div class="container">
+                <header class="animate__animated animate__fadeInDown">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA..." alt="РТ" class="main-logo">
+                    <div class="header-text">
+                        <span class="brand">Ростелеком</span>
+                        <span class="office">ПРОЕКТНЫЙ ОФИС</span>
+                    </div>
+                </header>
+
+                <div class="hero-title animate__animated animate__zoomIn">
+                    <h1>Отраслевые решения</h1>
+                    <p>Цифровизация промышленности и бизнеса</p>
+                </div>
+
+                <div class="nav-grid">
+                    <button class="nav-card" onclick="openSlide('robotics')">
+                        <span class="n">01</span>
+                        <h3>Роботизация</h3>
+                    </button>
+                    <button class="nav-card" onclick="openSlide('quality')">
+                        <span class="n">02</span>
+                        <h3>Контроль качества</h3>
+                    </button>
+                    <button class="nav-card" onclick="openSlide('security')">
+                        <span class="n">03</span>
+                        <h3>Средства охраны</h3>
+                    </button>
+                    <button class="nav-card" onclick="openSlide('eco')">
+                        <span class="n">04</span>
+                        <h3>Экомониторинг</h3>
+                    </button>
+                    <button class="nav-card" onclick="openSlide('equipment')">
+                        <span class="n">05</span>
+                        <h3>Тех. оборудование</h3>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="office-info">
+            <div class="container">
+                <h2 data-aos="fade-up">О Проектном офисе</h2>
+                <div class="info-content">
+                    <div class="info-block">
+                        <h4>Комплексный подход</h4>
+                        <p>Полный цикл: от аудита до сервиса 24/7.</p>
+                    </div>
+                    <div class="info-block">
+                        <h4>Импортозамещение</h4>
+                        <p>Российское ПО и оборудование (ФЗ-187).</p>
+                    </div>
+                    <div class="info-block">
+                        <h4>Масштабируемость</h4>
+                        <p>Решения для любых масштабов бизнеса.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="modal" class="modal-overlay hidden">
+        <div class="modal-window">
+            <button class="close-btn" onclick="closeSlide()">✕ ЗАКРЫТЬ</button>
+            <div id="modal-content"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
