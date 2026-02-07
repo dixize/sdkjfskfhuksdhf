@@ -1,0 +1,68 @@
+:root {
+    --dark-blue: #000a1f;
+    --rt-blue: #001a4d;
+    --rt-orange: #ff4f12;
+    --glass: rgba(255, 255, 255, 0.05);
+}
+
+body {
+    margin: 0;
+    background: var(--dark-blue);
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+}
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* Герой-секция */
+.hero {
+    min-height: 100vh;
+    background: radial-gradient(circle at top right, #001a4d 0%, #000a1f 70%);
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header { display: flex; align-items: center; gap: 20px; margin-bottom: 80px; }
+.main-logo { height: 50px; }
+.header-text { border-left: 2px solid var(--rt-orange); padding-left: 15px; }
+.brand { display: block; font-weight: bold; font-size: 1.2rem; }
+.office { font-size: 0.8rem; color: var(--rt-orange); letter-spacing: 2px; }
+
+.hero-title h1 { font-size: 4rem; text-transform: uppercase; margin: 0; }
+.hero-title p { font-size: 1.5rem; opacity: 0.6; margin-bottom: 50px; }
+
+/* Кнопки */
+.nav-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; }
+.nav-card {
+    background: var(--glass);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 30px 15px;
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+    transition: 0.4s;
+    text-align: left;
+}
+.nav-card:hover { background: var(--rt-orange); transform: translateY(-10px); }
+.nav-card .n { font-size: 2rem; font-weight: 800; opacity: 0.2; display: block; }
+.nav-card h3 { font-size: 1rem; margin-top: 10px; }
+
+/* Нижняя часть */
+.office-info { padding: 100px 0; background: rgba(255,255,255,0.02); }
+.info-content { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px; }
+.info-block { border-top: 2px solid var(--rt-orange); padding-top: 20px; }
+.info-block h4 { color: var(--rt-orange); margin-bottom: 10px; }
+
+/* Модалка */
+.modal-overlay {
+    position: fixed; inset: 0; background: #000; z-index: 100;
+    overflow-y: auto; display: none;
+}
+.modal-overlay.visible { display: block; }
+.modal-window { padding: 60px 20px; }
+.close-btn { position: fixed; top: 20px; right: 20px; background: var(--rt-orange); border: none; color: white; padding: 10px 20px; cursor: pointer; border-radius: 5px; }
+
+.hidden { display: none; }
